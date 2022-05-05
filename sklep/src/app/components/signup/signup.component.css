@@ -1,0 +1,28 @@
+/* .card{
+
+    border-radius: 20px;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+.card{
+    margin-top: 25px;
+    border-radius: 20px;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.invalid {
+    border-bottom: solid red 2px;
+ }
+
+ .valid {
+    border-bottom: solid green 2px;
+ }

@@ -1,0 +1,31 @@
+<div class="card">
+
+  <form [formGroup]="addShopForm" (ngSubmit)="addShop()">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="NameShop"
+        formControlName="NameShop"
+        placeholder="Podaj nazwę nowej listy"
+      />
+
+      <div class="input-group-append">
+        <button class="btn btn-success" type="submit">Dodaj</button>
+      </div>
+    </div>
+  </form>
+
+  <ul class="list-group" *ngFor="let list of ShopList">
+    <li class="list-group-item">
+      <div>
+        <p style="font-size: 20px">{{ list.NameShop }}</p>
+        <div class="action">
+          <button type="button" class="btn btn-success" (click)="showProducts(list.ShopId)"><i class="bi bi-eye-fill"></i></button>
+          <button type="button" class="btn btn-danger" (click)="delList(list.ShopId)"><i class="bi bi-trash"></i></button>
+        <br />
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
